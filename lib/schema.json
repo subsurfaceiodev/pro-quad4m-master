@@ -1,0 +1,637 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "type": "object",
+   "required": ["modelling_parameters", "mesh_generation", "waveforms", "stratum001", "stratum002", "plot_parameters"],
+   "additionalProperties": false,
+   "uniqueProperties": true,
+   "properties": {
+      "modelling_parameters": {
+         "type": "object",
+         "required": ["strata", "NUMB_iteration", "nodal_points", "boundary_conditions", "half_space_VS_m_s", "half_space_VP_m_s", "half_space_RHO_N_m_3", "acceleration_output"],
+         "additionalProperties": false,
+         "uniqueProperties": true,
+         "properties": {
+            "job_title": {
+               "minLength": 1,
+               "type": "string",
+               "maxLength": 80
+            },
+            "job_folder": {
+               "minLength": 1,
+               "type": "string",
+               "pattern": "^[a-zA-Z0-9_]*$",
+               "maxLength": 80
+            },
+            "strata": {
+               "type": "integer",
+               "minimum": 1
+            },
+            "nodal_points": {
+               "type": "object",
+               "required": ["1", "2", "3", "4", "5", "6"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "patternProperties": {
+                  "^[0-9]{1,3}$": {
+                     "type": "array",
+                     "minItems": 2,
+                     "maxItems": 2,
+                     "items": {
+                        "type": "number"
+                     }
+                  }
+               }
+            },
+            "half_space_VP_m_s": {
+               "type": "number",
+               "minimum": 1,
+               "maximum": 10000
+            },
+            "half_space_VS_m_s": {
+               "type": "number",
+               "minimum": 1,
+               "maximum": 10000
+            },
+            "half_space_RHO_N_m_3": {
+               "type": "number",
+               "minimum": 1,
+               "maximum": 100000
+            },
+            "NUMB_iteration": {
+               "type": "integer",
+               "minimum": 1
+            },
+            "acceleration_output": {
+               "type": "object",
+               "required": ["X_direction", "Y_direction", "XY_direction"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "X_direction": {
+                     "type": "object",
+                     "required": ["ground", "inside"],
+                     "additionalProperties": false,
+                     "uniqueProperties": true,
+                     "properties": {
+                        "ground": {
+                           "type": ["array", "null"],
+                           "items": {
+                              "type": "number"
+                           }
+                        },
+                        "inside": {
+                           "type": ["array", "null"],
+                           "items": {
+                              "type": "array",
+                              "minItems": 2,
+                              "maxItems": 2,
+                              "items": {
+                                 "type": "number"
+                              }
+                           }
+                        }
+                     }
+                  },
+                  "Y_direction": {
+                     "type": "object",
+                     "required": ["ground", "inside"],
+                     "additionalProperties": false,
+                     "uniqueProperties": true,
+                     "properties": {
+                        "ground": {
+                           "type": ["array", "null"],
+                           "items": {
+                              "type": "number"
+                           }
+                        },
+                        "inside": {
+                           "type": ["array", "null"],
+                           "items": {
+                              "type": "array",
+                              "minItems": 2,
+                              "maxItems": 2,
+                              "items": {
+                                 "type": "number"
+                              }
+                           }
+                        }
+                     }
+                  },
+                  "XY_direction": {
+                     "type": "object",
+                     "required": ["ground", "inside"],
+                     "additionalProperties": false,
+                     "uniqueProperties": true,
+                     "properties": {
+                        "ground": {
+                           "type": ["array", "null"],
+                           "items": {
+                              "type": "number"
+                           }
+                        },
+                        "inside": {
+                           "type": ["array", "null"],
+                           "items": {
+                              "type": "array",
+                              "minItems": 2,
+                              "maxItems": 2,
+                              "items": {
+                                 "type": "number"
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            },
+            "boundary_conditions": {
+               "type": "object",
+               "required": ["horizontal", "vertical-left", "vertical-right"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "vertical-right": {
+                     "type": "object",
+                     "required": ["position", "value"],
+                     "additionalProperties": false,
+                     "uniqueProperties": true,
+                     "properties": {
+                        "position": {
+                           "type": "number"
+                        },
+                        "value": {
+                           "type": "integer",
+                           "minimum": 0,
+                           "maximum": 4
+                        }
+                     }
+                  },
+                  "horizontal": {
+                     "type": "object",
+                     "required": ["position", "value"],
+                     "additionalProperties": false,
+                     "uniqueProperties": true,
+                     "properties": {
+                        "position": {
+                           "type": "number"
+                        },
+                        "value": {
+                           "type": "integer",
+                           "minimum": 0,
+                           "maximum": 4
+                        }
+                     }
+                  },
+                  "vertical-left": {
+                     "type": "object",
+                     "required": ["position", "value"],
+                     "additionalProperties": false,
+                     "uniqueProperties": true,
+                     "properties": {
+                        "position": {
+                           "type": "number"
+                        },
+                        "value": {
+                           "type": "integer",
+                           "minimum": 0,
+                           "maximum": 4
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      },
+      "mesh_generation": {
+         "type": "object",
+         "required": ["maximum_frequency", "uniform_initial_grid", "boundaries_triangular_elements_tf", "rearrange_nodes", "maximum_element_shape_factor", "mesh_downsampling"],
+         "additionalProperties": false,
+         "uniqueProperties": true,
+         "properties": {
+            "maximum_frequency": {
+               "type": "number",
+               "minimum": 0.5
+            },
+            "maximum_element_shape_factor": {
+               "type": "object",
+               "required": ["H/V", "V/H"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "H/V": {
+                     "type": "number",
+                     "minimum": 1,
+                     "maximum": 10
+                  },
+                  "V/H": {
+                     "type": "number",
+                     "minimum": 1,
+                     "maximum": 10
+                  }
+               }
+            },
+            "uniform_initial_grid": {
+               "type": "boolean"
+            },
+            "rearrange_nodes": {
+               "type": "object",
+               "required": ["rearrange_nodes_tf", "iterations", "scaling_factor", "distance_threshold_m", "vertical_deformation_coefficient", "horizontal_deformation_coefficient", "overall_exponent", "exponents"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "rearrange_nodes_tf": {
+                     "type": "boolean"
+                  },
+                  "iterations": {
+                     "type": "integer",
+                     "minimum": 3,
+                     "maximum": 100
+                  },
+                  "scaling_factor": {
+                     "type": "number",
+                     "minimum": 0.5,
+                     "maximum": 1
+                  },
+                  "vertical_deformation_coefficient": {
+                     "type": "number",
+                     "minimum": 0.0,
+                     "maximum": 1.0
+                  },
+                  "horizontal_deformation_coefficient": {
+                     "type": "number",
+                     "minimum": 0.0,
+                     "maximum": 1.0
+                  },
+                  "distance_threshold_m": {
+                     "type": "number",
+                     "minimum": 10,
+                     "maximum": 100
+                  },
+                  "exponents": {
+                     "type": "object",
+                     "required": ["inline", "inline_extremities", "orthogonal"],
+                     "additionalProperties": false,
+                     "uniqueProperties": true,
+                     "properties": {
+                        "inline": {
+                           "minimum": 0.01,
+                           "type": "number"
+                        },
+                        "inline_extremities": {
+                           "minimum": 0.01,
+                           "type": "number"
+                        },
+                        "orthogonal": {
+                           "minimum": 0.01,
+                           "type": "number"
+                        }
+                     }
+                  },
+                  "overall_exponent": {
+                     "type": ["number", "null"],
+                     "minimum": 0.01
+                  }
+               }
+            },
+            "boundaries_triangular_elements_tf": {
+               "type": "boolean"
+            },
+            "mesh_downsampling": {
+               "type": "object",
+               "required": ["mesh_downsampling_tf", "minimum_module_length", "element_shape_factor_multiplier", "triangular_extremities_tf"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "mesh_downsampling_tf": {
+                     "type": "boolean"
+                  },
+                  "minimum_module_length": {
+                     "type": "integer",
+                     "minimum": 3,
+                     "maximum": 50
+                  },
+                  "element_shape_factor_multiplier": {
+                     "type": "object",
+                     "required": ["H/V", "V/H"],
+                     "additionalProperties": false,
+                     "uniqueProperties": true,
+                     "properties": {
+                        "H/V": {
+                           "type": "number",
+                           "minimum": 1,
+                           "maximum": 10
+                        },
+                        "V/H": {
+                           "type": "number",
+                           "minimum": 1,
+                           "maximum": 10
+                        }
+                     }
+                  },
+                  "triangular_extremities_tf": {
+                     "type": "boolean"
+                  }
+               }
+            }
+         }
+      },
+      "waveforms": {
+         "type": "object",
+         "required": ["N1EQ_first_time_step_for_last_iteration", "KGEQ_last_time_step_for_last_iteration", "N2EQ_first_time_step_for_first_iterations", "N3EQ_last_time_step_for_first_iterations", "DTEQ_time_step_s", "multiplier_factor_to_g", "PRINPUT_period_corresponding_to_maximum_spectral_acceleration_of_horizontal_input_motion_s", "HDRX_header_lines_in_horizontal_input_time_history", "HDRY_header_lines_in_vertical_input_time_history"],
+         "additionalProperties": false,
+         "uniqueProperties": true,
+         "properties": {
+            "N1EQ_first_time_step_for_last_iteration": {
+               "type": "integer",
+               "minimum": 1
+            },
+            "KGEQ_last_time_step_for_last_iteration": {
+               "type": "integer",
+               "minimum": 1
+            },
+            "N2EQ_first_time_step_for_first_iterations": {
+               "type": "integer",
+               "minimum": 1
+            },
+            "N3EQ_last_time_step_for_first_iterations": {
+               "type": "integer",
+               "minimum": 1
+            },
+            "DTEQ_time_step_s": {
+               "type": "number",
+               "minimum": 0.01,
+               "maximum": 1.0
+            },
+            "PRINPUT_period_corresponding_to_maximum_spectral_acceleration_of_horizontal_input_motion_s": {
+               "type": ["number", "null"],
+               "minimum": 0.001,
+               "maximum": 1.0
+            },
+            "HDRX_header_lines_in_horizontal_input_time_history": {
+               "type": "integer",
+               "minimum": 0
+            },
+            "HDRY_header_lines_in_vertical_input_time_history": {
+               "type": "integer",
+               "minimum": 0
+            },
+            "multiplier_factor_to_g": {
+               "type": "number",
+               "minimum": 0
+            }
+         }
+      },
+      "plot_parameters": {
+         "type": "object",
+         "required": ["BW_scale_tf", "profile_SA_max_width", "profile_SA_BW_scale_tf", "scale", "profile_ACC_max_width", "save_PNG_tf"],
+         "additionalProperties": false,
+         "uniqueProperties": true,
+         "properties": {
+            "BW_scale_tf": {
+               "type": "boolean"
+            },
+            "profile_SA_max_width": {
+               "type": "number",
+               "minimum": 0.1
+            },
+            "profile_SA_BW_scale_tf": {
+               "type": "boolean"
+            },
+            "profile_ACC_max_width": {
+               "type": "number",
+               "minimum": 0.1
+            },
+            "profile_FFT_lower_limit_Hz": {
+               "type": "number",
+               "minimum": 0.001,
+               "maximum": 0.3
+            },
+            "scale": {
+               "type": "object",
+               "required": ["line_thicknesses", "fonts", "symbols"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "line_thicknesses": {
+                     "type": "number",
+                     "minimum": 0.01,
+                     "maximum": 100
+                  },
+                  "fonts": {
+                     "type": "number",
+                     "minimum": 0.01,
+                     "maximum": 100
+                  },
+                  "symbols": {
+                     "type": "number",
+                     "minimum": 0.01,
+                     "maximum": 100
+                  }
+               }
+            },
+            "save_PNG_tf": {
+               "type": "boolean"
+            }
+         }
+      }
+   },
+   "patternProperties": {
+      "^stratum[0-9]{3}$": {
+         "type": "object",
+         "required": ["name", "nodes", "soil_TYPE", "DENS_N_m_3", "PO_ratio", "GMX_kN_m_3", "G_kN_m_3", "XL_decimal"],
+         "additionalProperties": false,
+         "uniqueProperties": true,
+         "properties": {
+            "name": {
+               "minLength": 1,
+               "type": "string",
+               "maxLength": 7
+            },
+            "nodes": {
+               "minItems": 3,
+               "items": {
+                  "type": "integer"
+               },
+               "type": "array"
+            },
+            "DENS_N_m_3": {
+               "type": "object",
+               "required": ["value", "min_value", "uncentanty", "log_normal_tf"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "value": {
+                     "type": "number",
+                     "minimum": 1
+                  },
+                  "min_value": {
+                     "type": ["number", "null"],
+                     "minimum": 1
+                  },
+                  "uncentanty": {
+                     "type": ["number", "null"],
+                     "minimum": 0
+                  },
+                  "log_normal_tf": {
+                     "type": "boolean"
+                  }
+               }
+            },
+            "PO_ratio": {
+               "type": "object",
+               "required": ["value", "min_value", "uncentanty", "log_normal_tf"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "value": {
+                     "type": "number",
+                     "minimum": -1.0,
+                     "maximum": 0.5
+                  },
+                  "min_value": {
+                     "type": ["number", "null"],
+                     "minimum": -1.0,
+                     "maximum": 0.5
+                  },
+                  "uncentanty": {
+                     "type": ["number", "null"],
+                     "minimum": 0
+                  },
+                  "log_normal_tf": {
+                     "type": "boolean"
+                  }
+               }
+            },
+            "GMX_kN_m_3": {
+               "type": "object",
+               "required": ["value", "min_value", "uncentanty", "log_normal_tf"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "value": {
+                     "type": "number",
+                     "minimum": 1
+                  },
+                  "min_value": {
+                     "type": ["number", "null"],
+                     "minimum": 1
+                  },
+                  "uncentanty": {
+                     "type": ["number", "null"],
+                     "minimum": 0
+                  },
+                  "log_normal_tf": {
+                     "type": "boolean"
+                  }
+               }
+            },
+            "G_kN_m_3": {
+               "type": "object",
+               "required": ["percent_of_GMX"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "percent_of_GMX": {
+                     "type": "number",
+                     "minimum": 10,
+                     "maximum": 100
+                  }
+               }
+            },
+            "XL_decimal": {
+               "type": "object",
+               "required": ["value", "min_value", "uncentanty", "log_normal_tf"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "value": {
+                     "type": ["number", "null"],
+                     "minimum": 0.0005,
+                     "maximum": 1.0
+                  },
+                  "min_value": {
+                     "type": ["number", "null"],
+                     "minimum": 0.0005,
+                     "maximum": 1.0
+                  },
+                  "uncentanty": {
+                     "type": ["number", "null"],
+                     "minimum": 0
+                  },
+                  "log_normal_tf": {
+                     "type": "boolean"
+                  }
+               }
+            },
+            "soil_TYPE": {
+               "type": "object",
+               "required": ["G_GMX", "XL"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "G_GMX": {
+                     "type": ["array", "null"],
+                     "minItems": 8,
+                     "items": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                           "type": "number"
+                        }
+                     }
+                  },
+                  "XL": {
+                     "type": ["array", "null"],
+                     "minItems": 8,
+                     "items": {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                           "type": "number"
+                        }
+                     }
+                  }
+               }
+            },
+            "model_G_GMX_XL": {
+               "type": "object",
+               "required": ["model_G_GMX_XL_tf", "depth_of_water_table_m", "coef_of_lateral_earth_pressure_K0", "mean_effective_stress_atm", "plasticity_index_PI_percent", "over_consolidation_ratio_OCR", "XL_uncentanty"],
+               "additionalProperties": false,
+               "uniqueProperties": true,
+               "properties": {
+                  "model_G_GMX_XL_tf": {
+                     "type": "boolean"
+                  },
+                  "depth_of_water_table_m": {
+                     "type": "number"
+                  },
+                  "coef_of_lateral_earth_pressure_K0": {
+                     "type": "number",
+                     "minimum": 0.1,
+                     "maximum": 10
+                  },
+                  "mean_effective_stress_atm": {
+                     "type": ["number", "null"],
+                     "minimum": 0.05
+                  },
+                  "plasticity_index_PI_percent": {
+                     "type": "number",
+                     "minimum": 0,
+                     "maximum": 300
+                  },
+                  "over_consolidation_ratio_OCR": {
+                     "type": "number",
+                     "minimum": 0.5,
+                     "maximum": 100
+                  },
+                  "XL_uncentanty": {
+                     "type": "boolean"
+                  }
+               }
+            }
+         }
+      }
+   }
+}
