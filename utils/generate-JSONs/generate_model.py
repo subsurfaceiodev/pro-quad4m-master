@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-from collections import OrderedDict 
+from collections import OrderedDict
+
 nodal_points = OrderedDict()
 
 # ############################# #
@@ -175,37 +176,37 @@ PRINPUT_period_of_maximum_spectral_hz_acc_s = 0.22
 
 # formation CD
 # G/GMX
-G_GMX_strain_CD = [0.0001, 0.0039, 0.0059, 0.0076, 0.0092, 0.0106, 0.0140, \
-0.0160, 0.0174, 0.0187, 0.0200, 0.0491, 0.0741, 0.1127, 0.1785, 0.3081, 0.6332]
-G_GMX_CD = [1.0000, 0.9900, 0.9800, 0.9700, 0.9600, 0.9500, 0.9250, 0.9100, \
-0.9000, 0.8900, 0.8800, 0.7000, 0.6000, 0.5000, 0.4000, 0.3000, 0.2000]
+G_GMX_strain_CD = [0.0001, 0.0039, 0.0059, 0.0076, 0.0092, 0.0106, 0.0140,
+                   0.0160, 0.0174, 0.0187, 0.0200, 0.0491, 0.0741, 0.1127, 0.1785, 0.3081, 0.6332]
+G_GMX_CD = [1.0000, 0.9900, 0.9800, 0.9700, 0.9600, 0.9500, 0.9250, 0.9100,
+            0.9000, 0.8900, 0.8800, 0.7000, 0.6000, 0.5000, 0.4000, 0.3000, 0.2000]
 # XL
-XL_strain_CD = [0.0001, 0.0244, 0.0335, 0.0405, 0.0467, 0.0522, 0.0648, \
-0.0718, 0.0764, 0.0809, 0.0854, 0.1770, 0.2505, 0.3588, 0.5353, 0.6620, 0.6621]
-XL_CD = [3.0000, 3.3400, 3.6800, 4.0200, 4.3600, 4.7000, 5.5500, 6.06, \
-6.40, 6.74, 7.08, 13.20, 16.60, 20, 23.40, 24.998, 25]
+XL_strain_CD = [0.0001, 0.0244, 0.0335, 0.0405, 0.0467, 0.0522, 0.0648,
+                0.0718, 0.0764, 0.0809, 0.0854, 0.1770, 0.2505, 0.3588, 0.5353, 0.6620, 0.6621]
+XL_CD = [3.0000, 3.3400, 3.6800, 4.0200, 4.3600, 4.7000, 5.5500, 6.06,
+         6.40, 6.74, 7.08, 13.20, 16.60, 20, 23.40, 24.998, 25]
 # formation AA
 # G/GMX
-G_GMX_strain_AA = [0.0001, 0.0060, 0.0084, 0.0103, 0.0119, 0.0134, 0.0169, \
-0.0188, 0.0200, 0.0213, 0.0225, 0.0480, 0.0686, 0.0992, 0.1494, 0.2442, 0.4696]
-G_GMX_AA = [1.0000, 0.9900, 0.9800, 0.9700, 0.9600, 0.9500, 0.9250, 0.9100, \
-0.9000, 0.8900, 0.8800, 0.7000, 0.6000, 0.5000, 0.4000, 0.3000, 0.2000]
+G_GMX_strain_AA = [0.0001, 0.0060, 0.0084, 0.0103, 0.0119, 0.0134, 0.0169,
+                   0.0188, 0.0200, 0.0213, 0.0225, 0.0480, 0.0686, 0.0992, 0.1494, 0.2442, 0.4696]
+G_GMX_AA = [1.0000, 0.9900, 0.9800, 0.9700, 0.9600, 0.9500, 0.9250, 0.9100,
+            0.9000, 0.8900, 0.8800, 0.7000, 0.6000, 0.5000, 0.4000, 0.3000, 0.2000]
 # XL
-XL_strain_AA = [0.0001, 0.0084, 0.0127, 0.0163, 0.0196, 0.0226, 0.0298, \
-0.0339, 0.0366, 0.0394, 0.0421, 0.1020, 0.1533, 0.2320, 0.3659, 0.6283, 0.8585]
-XL_AA = [2.7700, 3.0669, 3.3638, 3.6607, 3.9576, 4.2545, 4.9968, 5.44, \
-5.74, 6.04, 6.33, 11.68, 14.64, 17.61, 20.58, 23.55, 24.98]
+XL_strain_AA = [0.0001, 0.0084, 0.0127, 0.0163, 0.0196, 0.0226, 0.0298,
+                0.0339, 0.0366, 0.0394, 0.0421, 0.1020, 0.1533, 0.2320, 0.3659, 0.6283, 0.8585]
+XL_AA = [2.7700, 3.0669, 3.3638, 3.6607, 3.9576, 4.2545, 4.9968, 5.44,
+         5.74, 6.04, 6.33, 11.68, 14.64, 17.61, 20.58, 23.55, 24.98]
 # formation AG
 # G/GMX
-G_GMX_strain_AG = [0.0001, 0.0091, 0.0119, 0.0139, 0.0157, 0.0173, 0.0208, \
-0.0227, 0.0239, 0.0252, 0.0264, 0.0503, 0.0689, 0.0959, 0.1389, 0.2176, 0.3971]
-G_GMX_AG = [1.0000, 0.9900, 0.9800, 0.9700, 0.9600, 0.9500, 0.9250, 0.9100, \
-0.9000, 0.8900, 0.8800, 0.7000, 0.6000, 0.5000, 0.4000, 0.3000, 0.2000]
+G_GMX_strain_AG = [0.0001, 0.0091, 0.0119, 0.0139, 0.0157, 0.0173, 0.0208,
+                   0.0227, 0.0239, 0.0252, 0.0264, 0.0503, 0.0689, 0.0959, 0.1389, 0.2176, 0.3971]
+G_GMX_AG = [1.0000, 0.9900, 0.9800, 0.9700, 0.9600, 0.9500, 0.9250, 0.9100,
+            0.9000, 0.8900, 0.8800, 0.7000, 0.6000, 0.5000, 0.4000, 0.3000, 0.2000]
 # XL
-XL_strain_AG = [0.0001, 0.0127, 0.0181, 0.0224, 0.0262, 0.0296, 0.0376, \
-0.0421, 0.0450, 0.0480, 0.0509, 0.1118, 0.1619, 0.2367, 0.3606, 0.5964, 0.6906]
-XL_AG = [2.5000, 2.8103, 3.1206, 3.4309, 3.7412, 4.0515, 4.8273, 5.29, \
-5.60, 5.91, 6.22, 11.81, 14.91, 18.01, 21.12, 24.22, 25.00]
+XL_strain_AG = [0.0001, 0.0127, 0.0181, 0.0224, 0.0262, 0.0296, 0.0376,
+                0.0421, 0.0450, 0.0480, 0.0509, 0.1118, 0.1619, 0.2367, 0.3606, 0.5964, 0.6906]
+XL_AG = [2.5000, 2.8103, 3.1206, 3.4309, 3.7412, 4.0515, 4.8273, 5.29,
+         5.60, 5.91, 6.22, 11.81, 14.91, 18.01, 21.12, 24.22, 25.00]
 
 # -----------------------------------end--
 # --- block "dynamic soil properties" ----
@@ -219,8 +220,8 @@ XL_AG = [2.5000, 2.8103, 3.1206, 3.4309, 3.7412, 4.0515, 4.8273, 5.29, \
 # ----------------------------------------------------------------------
 st001_name = 'st. 1'
 # stratum 1: nodal points
-st001_n_ps = [1, 2, 3, 4, 5, 6, 7, 8, 27, 28, 29, 35, 36, 37, 38, 39, \
-40, 41, 42, 59, 58, 57, 56, 55, 54, 52, 53, 22, 23, 24, 25, 26, 60, 61]
+st001_n_ps = [1, 2, 3, 4, 5, 6, 7, 8, 27, 28, 29, 35, 36, 37, 38, 39,
+              40, 41, 42, 59, 58, 57, 56, 55, 54, 52, 53, 22, 23, 24, 25, 26, 60, 61]
 st001_DENS_N_m_3 = {'value': 22000, 'min_value': None, 'uncentanty': None, 'log_normal_tf': False}
 st001_PO_ratio = {'value': 0.392, 'min_value': None, 'uncentanty': None, 'log_normal_tf': False}
 st001_GMX_kN_m_3 = {'value': 4907000, 'min_value': 4498000, 'uncentanty': 204400, 'log_normal_tf': False}
@@ -232,9 +233,9 @@ st001_soil_TYPE_G_GMX_strain = None
 st001_soil_TYPE_XL_decimal = None
 st001_soil_TYPE_XL_strain = None
 # model_G_GMX_XL
-st001_model_G_GMX_XL = {'model_G_GMX_XL_tf': False, 'depth_of_water_table_m': 0.0, \
-'coef_of_lateral_earth_pressure_K0': 0.5, 'mean_effective_stress_atm': None, \
-'plasticity_index_PI_percent': 0.0, 'over_consolidation_ratio_OCR': 1.0, 'XL_uncentanty': True}
+st001_model_G_GMX_XL = {'model_G_GMX_XL_tf': False, 'depth_of_water_table_m': 0.0,
+                        'coef_of_lateral_earth_pressure_K0': 0.5, 'mean_effective_stress_atm': None,
+                        'plasticity_index_PI_percent': 0.0, 'over_consolidation_ratio_OCR': 1.0, 'XL_uncentanty': True}
 # ----------------------------------------------------------------------
 # end-of-inner-block [stratum001]
 
@@ -254,9 +255,9 @@ st002_soil_TYPE_G_GMX_strain = G_GMX_strain_AG
 st002_soil_TYPE_XL_decimal = XL_AG
 st002_soil_TYPE_XL_strain = XL_strain_AG
 # model_G_GMX_XL
-st002_model_G_GMX_XL = {'model_G_GMX_XL_tf': False, 'depth_of_water_table_m': 0.0, \
-'coef_of_lateral_earth_pressure_K0': 0.5, 'mean_effective_stress_atm': None, \
-'plasticity_index_PI_percent': 0.0, 'over_consolidation_ratio_OCR': 1.0, 'XL_uncentanty': True}
+st002_model_G_GMX_XL = {'model_G_GMX_XL_tf': False, 'depth_of_water_table_m': 0.0,
+                        'coef_of_lateral_earth_pressure_K0': 0.5, 'mean_effective_stress_atm': None,
+                        'plasticity_index_PI_percent': 0.0, 'over_consolidation_ratio_OCR': 1.0, 'XL_uncentanty': True}
 # ----------------------------------------------------------------------
 # end-of-inner-block [stratum002]
 
@@ -264,8 +265,8 @@ st002_model_G_GMX_XL = {'model_G_GMX_XL_tf': False, 'depth_of_water_table_m': 0.
 # ----------------------------------------------------------------------
 st003_name = 'st. 3'
 # stratum 3: nodal points
-st003_n_ps = [29, 30, 31, 32, 33, 34, 16, 17, 49, 48, 47, 46, 45, 44, 43, \
-42, 41, 40, 39, 38, 37, 36, 35]
+st003_n_ps = [29, 30, 31, 32, 33, 34, 16, 17, 49, 48, 47, 46, 45, 44, 43,
+              42, 41, 40, 39, 38, 37, 36, 35]
 st003_DENS_N_m_3 = {'value': 21200, 'min_value': None, 'uncentanty': None, 'log_normal_tf': False}
 st003_PO_ratio = {'value': 0.477, 'min_value': None, 'uncentanty': None, 'log_normal_tf': False}
 st003_GMX_kN_m_3 = {'value': 594100, 'min_value': 490200, 'uncentanty': 24760, 'log_normal_tf': False}
@@ -277,9 +278,9 @@ st003_soil_TYPE_G_GMX_strain = None
 st003_soil_TYPE_XL_decimal = None
 st003_soil_TYPE_XL_strain = None
 # model_G_GMX_XL
-st003_model_G_GMX_XL = {'model_G_GMX_XL_tf': True, 'depth_of_water_table_m': 0.0, \
-'coef_of_lateral_earth_pressure_K0': 0.5, 'mean_effective_stress_atm': None, \
-'plasticity_index_PI_percent': 0.0, 'over_consolidation_ratio_OCR': 1.0, 'XL_uncentanty': False}
+st003_model_G_GMX_XL = {'model_G_GMX_XL_tf': True, 'depth_of_water_table_m': 0.0,
+                        'coef_of_lateral_earth_pressure_K0': 0.5, 'mean_effective_stress_atm': None,
+                        'plasticity_index_PI_percent': 0.0, 'over_consolidation_ratio_OCR': 1.0, 'XL_uncentanty': False}
 # ----------------------------------------------------------------------
 # end-of-inner-block [stratum003]
 
@@ -299,9 +300,9 @@ st004_soil_TYPE_G_GMX_strain = G_GMX_strain_AA
 st004_soil_TYPE_XL_decimal = XL_AA
 st004_soil_TYPE_XL_strain = XL_strain_AA
 # model_G_GMX_XL
-st004_model_G_GMX_XL = {'model_G_GMX_XL_tf': False, 'depth_of_water_table_m': 0.0, \
-'coef_of_lateral_earth_pressure_K0': 0.5, 'mean_effective_stress_atm': None, \
-'plasticity_index_PI_percent': 0.0, 'over_consolidation_ratio_OCR': 1.0, 'XL_uncentanty': True}
+st004_model_G_GMX_XL = {'model_G_GMX_XL_tf': False, 'depth_of_water_table_m': 0.0,
+                        'coef_of_lateral_earth_pressure_K0': 0.5, 'mean_effective_stress_atm': None,
+                        'plasticity_index_PI_percent': 0.0, 'over_consolidation_ratio_OCR': 1.0, 'XL_uncentanty': True}
 # ----------------------------------------------------------------------
 # end-of-inner-block [stratum004]
 
@@ -321,9 +322,9 @@ st005_soil_TYPE_G_GMX_strain = G_GMX_strain_AG
 st005_soil_TYPE_XL_decimal = XL_AG
 st005_soil_TYPE_XL_strain = XL_strain_AG
 # model_G_GMX_XL
-st005_model_G_GMX_XL = {'model_G_GMX_XL_tf': False, 'depth_of_water_table_m': 0.0, \
-'coef_of_lateral_earth_pressure_K0': 0.5, 'mean_effective_stress_atm': None, \
-'plasticity_index_PI_percent': 0.0, 'over_consolidation_ratio_OCR': 1.0, 'XL_uncentanty': True}
+st005_model_G_GMX_XL = {'model_G_GMX_XL_tf': False, 'depth_of_water_table_m': 0.0,
+                        'coef_of_lateral_earth_pressure_K0': 0.5, 'mean_effective_stress_atm': None,
+                        'plasticity_index_PI_percent': 0.0, 'over_consolidation_ratio_OCR': 1.0, 'XL_uncentanty': True}
 # ----------------------------------------------------------------------
 # end-of-inner-block [stratum005]
 
@@ -343,9 +344,9 @@ st006_soil_TYPE_G_GMX_strain = G_GMX_strain_CD
 st006_soil_TYPE_XL_decimal = XL_CD
 st006_soil_TYPE_XL_strain = XL_strain_CD
 # model_G_GMX_XL
-st006_model_G_GMX_XL = {'model_G_GMX_XL_tf': False, 'depth_of_water_table_m': 0.0, \
-'coef_of_lateral_earth_pressure_K0': 0.5, 'mean_effective_stress_atm': None, \
-'plasticity_index_PI_percent': 0.0, 'over_consolidation_ratio_OCR': 1.0, 'XL_uncentanty': True}
+st006_model_G_GMX_XL = {'model_G_GMX_XL_tf': False, 'depth_of_water_table_m': 0.0,
+                        'coef_of_lateral_earth_pressure_K0': 0.5, 'mean_effective_stress_atm': None,
+                        'plasticity_index_PI_percent': 0.0, 'over_consolidation_ratio_OCR': 1.0, 'XL_uncentanty': True}
 # ----------------------------------------------------------------------
 # end-of-inner-block [stratum006]
 
@@ -402,6 +403,7 @@ m_shape_factor = OrderedDict()
 input_dict = OrderedDict()
 acceleration_output = OrderedDict()
 
+
 def v_u_create(a_dict, a_key='uncentanty', b_key=None, c_key=None):
     v_u_dict = OrderedDict()
     v_u_dict['value'] = a_dict['value']
@@ -409,6 +411,7 @@ def v_u_create(a_dict, a_key='uncentanty', b_key=None, c_key=None):
     v_u_dict[a_key] = a_dict[a_key]
     if c_key: v_u_dict[c_key] = a_dict[c_key]
     return v_u_dict
+
 
 modelling_parameters['job_title'] = job_title
 modelling_parameters['job_folder'] = job_folder
@@ -419,10 +422,10 @@ modelling_parameters['half_space_VP_m_s'] = half_space_VP_m_s
 modelling_parameters['half_space_VS_m_s'] = half_space_VS_m_s
 modelling_parameters['half_space_RHO_N_m_3'] = half_space_RHO_N_m_3
 
-boundary_conditions = {\
-'horizontal': v_u_create(horizontal_boundary, a_key='position'), \
-'vertical-left': v_u_create(vertical_left_boundary, a_key='position'), \
-'vertical-right': v_u_create(vertical_right_boundary, a_key='position') \
+boundary_conditions = {
+    'horizontal': v_u_create(horizontal_boundary, a_key='position'),
+    'vertical-left': v_u_create(vertical_left_boundary, a_key='position'),
+    'vertical-right': v_u_create(vertical_right_boundary, a_key='position')
 }
 
 acceleration_output['X_direction'] = {'inside': inside_X, 'ground': ground_X}
@@ -455,7 +458,8 @@ waveforms['DTEQ_time_step_s'] = DTEQ_time_step_s
 waveforms['HDRX_header_lines_in_horizontal_input_time_history'] = HDRX_header_lines_in_horizontal_input_time_history
 waveforms['HDRY_header_lines_in_vertical_input_time_history'] = HDRY_header_lines_in_vertical_input_time_history
 waveforms['multiplier_factor_to_g'] = multiplier_factor_to_g
-waveforms['PRINPUT_period_corresponding_to_maximum_spectral_acceleration_of_horizontal_input_motion_s'] = PRINPUT_period_of_maximum_spectral_hz_acc_s
+waveforms[
+    'PRINPUT_period_corresponding_to_maximum_spectral_acceleration_of_horizontal_input_motion_s'] = PRINPUT_period_of_maximum_spectral_hz_acc_s
 
 plot_parameters['BW_scale_tf'] = BW_scale_tf
 plot_parameters['profile_SA_max_width'] = profile_SA_max_width
@@ -472,11 +476,12 @@ mesh_generation['rearrange_nodes'] = rearrange_nodes
 mesh_generation['boundaries_triangular_elements_tf'] = boundaries_triangular_elements_tf
 mesh_generation['mesh_downsampling'] = mesh_downsampling
 
-#~ modelling_parameters['DENS_IDW'] = False
-#~ modelling_parameters['GMX_IDW'] = False
-#~ modelling_parameters['XL_IDW'] = False
+# ~ modelling_parameters['DENS_IDW'] = False
+# ~ modelling_parameters['GMX_IDW'] = False
+# ~ modelling_parameters['XL_IDW'] = False
 modelling_parameters['boundary_conditions'] = boundary_conditions
 modelling_parameters['acceleration_output'] = acceleration_output
+
 
 def d_model_G_GMX_XL(st_model_G_GMX_XL):
     model_G_GMX_XL = OrderedDict()
@@ -489,33 +494,39 @@ def d_model_G_GMX_XL(st_model_G_GMX_XL):
     model_G_GMX_XL['XL_uncentanty'] = st_model_G_GMX_XL['XL_uncentanty']
     return model_G_GMX_XL
 
+
 def soil_data_strain(G_GMX, G_GMX_strain, XL_decimal, XL_strain):
     TYPE_material = OrderedDict()
     if not G_GMX or not G_GMX_strain or not XL_decimal or not XL_strain:
         TYPE_material['G_GMX'] = None
         TYPE_material['XL'] = None
     else:
-        G_GMX_vs_strain = map(list, zip(*[G_GMX_strain, G_GMX]))
-        XL_vs_strain = map(list, zip(*[XL_strain, XL_decimal]))
+        G_GMX_vs_strain = list(map(list, list(zip(*[G_GMX_strain, G_GMX]))))
+        XL_vs_strain = list(map(list, list(zip(*[XL_strain, XL_decimal]))))
         TYPE_material['G_GMX'] = G_GMX_vs_strain
         TYPE_material['XL'] = XL_vs_strain
     return TYPE_material
 
+
 input_dict['modelling_parameters'] = modelling_parameters
 
 for jjj in range(strata):
-    iii = '{:03d}'.format(jjj+1)
+    iii = '{:03d}'.format(jjj + 1)
     exec('stratum' + iii + ' = OrderedDict()')
     exec("stratum" + iii + "['name'] = st" + iii + "_name")
     exec("stratum" + iii + "['nodes'] = st" + iii + "_n_ps")
-    exec("stratum" + iii + "['DENS_N_m_3'] = v_u_create(st" + iii + "_DENS_N_m_3, b_key='min_value', c_key='log_normal_tf')")
-    exec("stratum" + iii + "['PO_ratio'] = v_u_create(st" + iii + "_PO_ratio, b_key='min_value', c_key='log_normal_tf')")
-    exec("stratum" + iii + "['GMX_kN_m_3'] = v_u_create(st" + iii + "_GMX_kN_m_3, b_key='min_value', c_key='log_normal_tf')")
+    exec(
+        "stratum" + iii + "['DENS_N_m_3'] = v_u_create(st" + iii + "_DENS_N_m_3, b_key='min_value', c_key='log_normal_tf')")
+    exec(
+        "stratum" + iii + "['PO_ratio'] = v_u_create(st" + iii + "_PO_ratio, b_key='min_value', c_key='log_normal_tf')")
+    exec(
+        "stratum" + iii + "['GMX_kN_m_3'] = v_u_create(st" + iii + "_GMX_kN_m_3, b_key='min_value', c_key='log_normal_tf')")
     exec("stratum" + iii + "['G_kN_m_3'] = st" + iii + "_G_kN_m_3")
-    exec("stratum" + iii + "['XL_decimal'] = v_u_create(st" + iii + "_XL_decimal, b_key='min_value', c_key='log_normal_tf')")
+    exec(
+        "stratum" + iii + "['XL_decimal'] = v_u_create(st" + iii + "_XL_decimal, b_key='min_value', c_key='log_normal_tf')")
     exec("st" + iii + "_soil_TYPE = soil_data_strain(st" + iii + \
-    "_soil_TYPE_G_GMX, st" + iii + "_soil_TYPE_G_GMX_strain, st" + iii + \
-    "_soil_TYPE_XL_decimal, st" + iii + "_soil_TYPE_XL_strain)")
+         "_soil_TYPE_G_GMX, st" + iii + "_soil_TYPE_G_GMX_strain, st" + iii + \
+         "_soil_TYPE_XL_decimal, st" + iii + "_soil_TYPE_XL_strain)")
     exec("stratum" + iii + "['soil_TYPE'] = st" + iii + "_soil_TYPE")
     exec("stratum" + iii + "['model_G_GMX_XL'] = d_model_G_GMX_XL(st" + iii + "_model_G_GMX_XL)")
     exec("input_dict['stratum" + iii + "'] = stratum" + iii + "")
@@ -528,4 +539,4 @@ input_json = to_json(input_dict)
 with open(opts.json, 'w') as h_input_json:
     h_input_json.write(input_json + '\n')
 
-print opts.json + " has been updated"
+print(opts.json + " has been updated")

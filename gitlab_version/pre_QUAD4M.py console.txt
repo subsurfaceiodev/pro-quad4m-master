@@ -1,0 +1,40 @@
+C:\Python27\python.exe pre_QUAD4M.py model.json time-history.xacc time-history.yacc 
+
+results folder: C:\Users\jorge\Downloads\pro-quad4m-master\var\test_1
+=================== strata plot ===================
+================= mesh generation =================
+max frequency (Kuhlemeyer et al., 1973) [Hz]: 12.0
+=========== max H/V shape factor:  2.0 ============
+=========== max V/H shape factor:  1.5 ============
+========== use triangular elements: True ==========
+============== rearrange nodes: True ==============
+===== vertical deformation coefficient: 0.300 =====
+==== horizontal deformation coefficient: 0.150 ====
+========== distance threshold [m]: 50.0 ===========
+============== scaling factor: 0.95 ===============
+============== inline exponent: 1.5 ===============
+======= (in)line-extremities exponent: 1.0 ========
+============ orthogonal exponent: 2.0 =============
+====== rearrange nodes -  20 iterations done ======
+======= estimating: G/G0-gamma and D-gamma ========
+================ ## stratum003 ## =================
+========= depth of water table [m]:  0.0 ==========
+==== coef. of lateral earth pressure K0: 0.50 =====
+======= mean effective stress [atm]:   2.83 =======
+================= PI/OCR: 0.0/1.0 =================
+== D0/D0_sigma/D0_min [percent]: 0.59/0.00/0.12 ===
+============= mesh downsampling: True =============
+==== min length of module to be reshaped:   6 =====
+======== H/V shape factor multiplier:  2.2 ========
+======== V/H shape factor multiplier:  1.5 ========
+= # of elements: 14963 (before) -->  2933 (after) =
+==================== mesh plot ====================
+=================   2933 elements =================
+==================== DENS plot ====================
+===================== PO plot =====================
+==================== GMX plot =====================
+===================== G plot ======================
+===================== XL plot =====================
+============ saving QUAD4M input files ============
+
+Process finished with exit code 0

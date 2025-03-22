@@ -1,0 +1,422 @@
+{
+   "modelling_parameters": {
+      "job_title": "test #1",
+      "job_folder": "test_1",
+      "strata": 6,
+      "nodal_points": {
+         "1": [-100, 193],
+         "2": [10, 193],
+         "3": [25, 200],
+         "4": [35, 200],
+         "5": [50, 195],
+         "6": [60, 195],
+         "7": [75, 190],
+         "8": [90, 190],
+         "9": [125, 185],
+         "10": [140, 182],
+         "11": [160, 183],
+         "12": [165, 184],
+         "13": [175, 185],
+         "14": [190, 182],
+         "15": [210, 188],
+         "16": [225, 187],
+         "17": [235, 187],
+         "18": [255, 190],
+         "19": [265, 193],
+         "20": [300, 194],
+         "21": [315, 190],
+         "22": [335, 185],
+         "23": [355, 180],
+         "24": [365, 180],
+         "25": [380, 185],
+         "26": [500, 185],
+         "27": [90, 183],
+         "28": [110, 177],
+         "29": [130, 176],
+         "30": [140, 178],
+         "31": [150, 168],
+         "32": [160, 164],
+         "33": [200, 165],
+         "34": [210, 168],
+         "35": [140, 158],
+         "36": [160, 148],
+         "37": [180, 128],
+         "38": [200, 115],
+         "39": [220, 108],
+         "40": [230, 112],
+         "41": [260, 125],
+         "42": [275, 130],
+         "43": [280, 137],
+         "44": [290, 147],
+         "45": [285, 155],
+         "46": [300, 175],
+         "47": [280, 175],
+         "48": [260, 177],
+         "49": [240, 182],
+         "50": [310, 180],
+         "51": [325, 182],
+         "52": [330, 183],
+         "53": [335, 182],
+         "54": [325, 175],
+         "55": [330, 170],
+         "56": [320, 165],
+         "57": [315, 152],
+         "58": [310, 140],
+         "59": [300, 135],
+         "60": [500, 0],
+         "61": [-100, 0]
+      },
+      "NUMB_iteration": 4,
+      "half_space_VP_m_s": 3200,
+      "half_space_VS_m_s": 1350,
+      "half_space_RHO_N_m_3": 22000,
+      "boundary_conditions": {
+         "vertical-right": {
+            "value": 2,
+            "position": 500
+         },
+         "horizontal": {
+            "value": 4,
+            "position": 0
+         },
+         "vertical-left": {
+            "value": 2,
+            "position": -100
+         }
+      },
+      "acceleration_output": {
+         "X_direction": {
+            "inside": null,
+            "ground": null
+         },
+         "Y_direction": {
+            "inside": null,
+            "ground": null
+         },
+         "XY_direction": {
+            "inside": [[200, 164.5], [200, 145], [200, 113]],
+            "ground": [0, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400]
+         }
+      }
+   },
+   "stratum001": {
+      "name": "st. 1",
+      "nodes": [1, 2, 3, 4, 5, 6, 7, 8, 27, 28, 29, 35, 36, 37, 38, 39, 40, 41, 42, 59, 58, 57, 56, 55, 54, 52, 53, 22, 23, 24, 25, 26, 60, 61],
+      "DENS_N_m_3": {
+         "value": 22000,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "PO_ratio": {
+         "value": 0.392,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "GMX_kN_m_3": {
+         "value": 4907000,
+         "min_value": 4498000,
+         "uncentanty": 204400,
+         "log_normal_tf": false
+      },
+      "G_kN_m_3": {
+         "percent_of_GMX": 100
+      },
+      "XL_decimal": {
+         "value": 0.005,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "soil_TYPE": {
+         "G_GMX": null,
+         "XL": null
+      },
+      "model_G_GMX_XL": {
+         "model_G_GMX_XL_tf": false,
+         "depth_of_water_table_m": 0.0,
+         "coef_of_lateral_earth_pressure_K0": 0.5,
+         "mean_effective_stress_atm": null,
+         "plasticity_index_PI_percent": 0.0,
+         "over_consolidation_ratio_OCR": 1.0,
+         "XL_uncentanty": true
+      }
+   },
+   "stratum002": {
+      "name": "st. 2",
+      "nodes": [52, 54, 55, 56, 57, 58, 59, 42, 43, 44, 45, 46, 50, 51],
+      "DENS_N_m_3": {
+         "value": 21200,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "PO_ratio": {
+         "value": 0.481,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "GMX_kN_m_3": {
+         "value": 440600,
+         "min_value": 363600,
+         "uncentanty": 18360,
+         "log_normal_tf": false
+      },
+      "G_kN_m_3": {
+         "percent_of_GMX": 90
+      },
+      "XL_decimal": {
+         "value": 0.025,
+         "min_value": 0.023,
+         "uncentanty": 0.001,
+         "log_normal_tf": false
+      },
+      "soil_TYPE": {
+         "G_GMX": [[0.0001, 1.0], [0.0091, 0.99], [0.0119, 0.98], [0.0139, 0.97], [0.0157, 0.96], [0.0173, 0.95], [0.0208, 0.925], [0.0227, 0.91], [0.0239, 0.9], [0.0252, 0.89], [0.0264, 0.88], [0.0503, 0.7], [0.0689, 0.6], [0.0959, 0.5], [0.1389, 0.4], [0.2176, 0.3], [0.3971, 0.2]],
+         "XL": [[0.0001, 2.5], [0.0127, 2.8103], [0.0181, 3.1206], [0.0224, 3.4309], [0.0262, 3.7412], [0.0296, 4.0515], [0.0376, 4.8273], [0.0421, 5.29], [0.045, 5.6], [0.048, 5.91], [0.0509, 6.22], [0.1118, 11.81], [0.1619, 14.91], [0.2367, 18.01], [0.3606, 21.12], [0.5964, 24.22], [0.6906, 25.0]]
+      },
+      "model_G_GMX_XL": {
+         "model_G_GMX_XL_tf": false,
+         "depth_of_water_table_m": 0.0,
+         "coef_of_lateral_earth_pressure_K0": 0.5,
+         "mean_effective_stress_atm": null,
+         "plasticity_index_PI_percent": 0.0,
+         "over_consolidation_ratio_OCR": 1.0,
+         "XL_uncentanty": true
+      }
+   },
+   "stratum003": {
+      "name": "st. 3",
+      "nodes": [29, 30, 31, 32, 33, 34, 16, 17, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35],
+      "DENS_N_m_3": {
+         "value": 21200,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "PO_ratio": {
+         "value": 0.477,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "GMX_kN_m_3": {
+         "value": 594100,
+         "min_value": 490200,
+         "uncentanty": 24760,
+         "log_normal_tf": false
+      },
+      "G_kN_m_3": {
+         "percent_of_GMX": 90
+      },
+      "XL_decimal": {
+         "value": null,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "soil_TYPE": {
+         "G_GMX": null,
+         "XL": null
+      },
+      "model_G_GMX_XL": {
+         "model_G_GMX_XL_tf": true,
+         "depth_of_water_table_m": 0.0,
+         "coef_of_lateral_earth_pressure_K0": 0.5,
+         "mean_effective_stress_atm": null,
+         "plasticity_index_PI_percent": 0.0,
+         "over_consolidation_ratio_OCR": 1.0,
+         "XL_uncentanty": false
+      }
+   },
+   "stratum004": {
+      "name": "st. 4",
+      "nodes": [27, 28, 29, 30, 10, 9, 8],
+      "DENS_N_m_3": {
+         "value": 21150,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "PO_ratio": {
+         "value": 0.489,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "GMX_kN_m_3": {
+         "value": 202700,
+         "min_value": 148600,
+         "uncentanty": 8445,
+         "log_normal_tf": false
+      },
+      "G_kN_m_3": {
+         "percent_of_GMX": 80
+      },
+      "XL_decimal": {
+         "value": 0.0277,
+         "min_value": 0.0257,
+         "uncentanty": 0.001,
+         "log_normal_tf": false
+      },
+      "soil_TYPE": {
+         "G_GMX": [[0.0001, 1.0], [0.006, 0.99], [0.0084, 0.98], [0.0103, 0.97], [0.0119, 0.96], [0.0134, 0.95], [0.0169, 0.925], [0.0188, 0.91], [0.02, 0.9], [0.0213, 0.89], [0.0225, 0.88], [0.048, 0.7], [0.0686, 0.6], [0.0992, 0.5], [0.1494, 0.4], [0.2442, 0.3], [0.4696, 0.2]],
+         "XL": [[0.0001, 2.77], [0.0084, 3.0669], [0.0127, 3.3638], [0.0163, 3.6607], [0.0196, 3.9576], [0.0226, 4.2545], [0.0298, 4.9968], [0.0339, 5.44], [0.0366, 5.74], [0.0394, 6.04], [0.0421, 6.33], [0.102, 11.68], [0.1533, 14.64], [0.232, 17.61], [0.3659, 20.58], [0.6283, 23.55], [0.8585, 24.98]]
+      },
+      "model_G_GMX_XL": {
+         "model_G_GMX_XL_tf": false,
+         "depth_of_water_table_m": 0.0,
+         "coef_of_lateral_earth_pressure_K0": 0.5,
+         "mean_effective_stress_atm": null,
+         "plasticity_index_PI_percent": 0.0,
+         "over_consolidation_ratio_OCR": 1.0,
+         "XL_uncentanty": true
+      }
+   },
+   "stratum005": {
+      "name": "st. 5",
+      "nodes": [17, 18, 19, 20, 21, 22, 53, 52, 51, 50, 46, 47, 48, 49],
+      "DENS_N_m_3": {
+         "value": 21200,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "PO_ratio": {
+         "value": 0.485,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "GMX_kN_m_3": {
+         "value": 331300,
+         "min_value": 273300,
+         "uncentanty": 13800,
+         "log_normal_tf": false
+      },
+      "G_kN_m_3": {
+         "percent_of_GMX": 90
+      },
+      "XL_decimal": {
+         "value": 0.025,
+         "min_value": 0.023,
+         "uncentanty": 0.001,
+         "log_normal_tf": false
+      },
+      "soil_TYPE": {
+         "G_GMX": [[0.0001, 1.0], [0.0091, 0.99], [0.0119, 0.98], [0.0139, 0.97], [0.0157, 0.96], [0.0173, 0.95], [0.0208, 0.925], [0.0227, 0.91], [0.0239, 0.9], [0.0252, 0.89], [0.0264, 0.88], [0.0503, 0.7], [0.0689, 0.6], [0.0959, 0.5], [0.1389, 0.4], [0.2176, 0.3], [0.3971, 0.2]],
+         "XL": [[0.0001, 2.5], [0.0127, 2.8103], [0.0181, 3.1206], [0.0224, 3.4309], [0.0262, 3.7412], [0.0296, 4.0515], [0.0376, 4.8273], [0.0421, 5.29], [0.045, 5.6], [0.048, 5.91], [0.0509, 6.22], [0.1118, 11.81], [0.1619, 14.91], [0.2367, 18.01], [0.3606, 21.12], [0.5964, 24.22], [0.6906, 25.0]]
+      },
+      "model_G_GMX_XL": {
+         "model_G_GMX_XL_tf": false,
+         "depth_of_water_table_m": 0.0,
+         "coef_of_lateral_earth_pressure_K0": 0.5,
+         "mean_effective_stress_atm": null,
+         "plasticity_index_PI_percent": 0.0,
+         "over_consolidation_ratio_OCR": 1.0,
+         "XL_uncentanty": true
+      }
+   },
+   "stratum006": {
+      "name": "st. 6",
+      "nodes": [10, 11, 12, 13, 14, 15, 16, 34, 33, 32, 31, 30],
+      "DENS_N_m_3": {
+         "value": 19600,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "PO_ratio": {
+         "value": 0.493,
+         "min_value": null,
+         "uncentanty": null,
+         "log_normal_tf": false
+      },
+      "GMX_kN_m_3": {
+         "value": 55160,
+         "min_value": 35400,
+         "uncentanty": 2295,
+         "log_normal_tf": false
+      },
+      "G_kN_m_3": {
+         "percent_of_GMX": 70
+      },
+      "XL_decimal": {
+         "value": 0.03,
+         "min_value": 0.027,
+         "uncentanty": 0.0015,
+         "log_normal_tf": false
+      },
+      "soil_TYPE": {
+         "G_GMX": [[0.0001, 1.0], [0.0039, 0.99], [0.0059, 0.98], [0.0076, 0.97], [0.0092, 0.96], [0.0106, 0.95], [0.014, 0.925], [0.016, 0.91], [0.0174, 0.9], [0.0187, 0.89], [0.02, 0.88], [0.0491, 0.7], [0.0741, 0.6], [0.1127, 0.5], [0.1785, 0.4], [0.3081, 0.3], [0.6332, 0.2]],
+         "XL": [[0.0001, 3.0], [0.0244, 3.34], [0.0335, 3.68], [0.0405, 4.02], [0.0467, 4.36], [0.0522, 4.7], [0.0648, 5.55], [0.0718, 6.06], [0.0764, 6.4], [0.0809, 6.74], [0.0854, 7.08], [0.177, 13.2], [0.2505, 16.6], [0.3588, 20], [0.5353, 23.4], [0.662, 24.998], [0.6621, 25]]
+      },
+      "model_G_GMX_XL": {
+         "model_G_GMX_XL_tf": false,
+         "depth_of_water_table_m": 0.0,
+         "coef_of_lateral_earth_pressure_K0": 0.5,
+         "mean_effective_stress_atm": null,
+         "plasticity_index_PI_percent": 0.0,
+         "over_consolidation_ratio_OCR": 1.0,
+         "XL_uncentanty": true
+      }
+   },
+   "mesh_generation": {
+      "maximum_frequency": 12.0,
+      "maximum_element_shape_factor": {
+         "H/V": 2.0,
+         "V/H": 1.5
+      },
+      "uniform_initial_grid": false,
+      "rearrange_nodes": {
+         "rearrange_nodes_tf": true,
+         "scaling_factor": 0.95,
+         "iterations": 20,
+         "vertical_deformation_coefficient": 0.3,
+         "horizontal_deformation_coefficient": 0.15,
+         "distance_threshold_m": 50.0,
+         "exponents": {
+            "inline": 1.5,
+            "inline_extremities": 1.0,
+            "orthogonal": 2.0
+         },
+         "overall_exponent": null
+      },
+      "boundaries_triangular_elements_tf": true,
+      "mesh_downsampling": {
+         "mesh_downsampling_tf": true,
+         "minimum_module_length": 6,
+         "element_shape_factor_multiplier": {
+            "H/V": 2.2,
+            "V/H": 1.5
+         },
+         "triangular_extremities_tf": true
+      }
+   },
+   "waveforms": {
+      "N1EQ_first_time_step_for_last_iteration": 1,
+      "KGEQ_last_time_step_for_last_iteration": 2250,
+      "N2EQ_first_time_step_for_first_iterations": 300,
+      "N3EQ_last_time_step_for_first_iterations": 1300,
+      "DTEQ_time_step_s": 0.02,
+      "HDRX_header_lines_in_horizontal_input_time_history": 64,
+      "HDRY_header_lines_in_vertical_input_time_history": 64,
+      "multiplier_factor_to_g": 0.0010197,
+      "PRINPUT_period_corresponding_to_maximum_spectral_acceleration_of_horizontal_input_motion_s": 0.22
+   },
+   "plot_parameters": {
+      "BW_scale_tf": false,
+      "profile_SA_max_width": 30.0,
+      "profile_SA_BW_scale_tf": false,
+      "profile_ACC_max_width": 45.0,
+      "profile_FFT_lower_limit_Hz": 0.07,
+      "scale": {
+         "symbols": 0.7,
+         "fonts": 0.7,
+         "line_thicknesses": 0.7
+      },
+      "save_PNG_tf": true
+   }
+}

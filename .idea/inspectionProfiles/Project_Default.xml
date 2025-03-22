@@ -1,0 +1,34 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="21">
+            <item index="0" class="java.lang.String" itemvalue="svgelements" />
+            <item index="1" class="java.lang.String" itemvalue="mpldxf" />
+            <item index="2" class="java.lang.String" itemvalue="smtk" />
+            <item index="3" class="java.lang.String" itemvalue="openquake.engine" />
+            <item index="4" class="java.lang.String" itemvalue="gmspy" />
+            <item index="5" class="java.lang.String" itemvalue="setuptools" />
+            <item index="6" class="java.lang.String" itemvalue="uvicorn" />
+            <item index="7" class="java.lang.String" itemvalue="requests" />
+            <item index="8" class="java.lang.String" itemvalue="dash-mantine-components" />
+            <item index="9" class="java.lang.String" itemvalue="fastapi" />
+            <item index="10" class="java.lang.String" itemvalue="orjson" />
+            <item index="11" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="12" class="java.lang.String" itemvalue="more_itertools" />
+            <item index="13" class="java.lang.String" itemvalue="scipy" />
+            <item index="14" class="java.lang.String" itemvalue="shapely" />
+            <item index="15" class="java.lang.String" itemvalue="ezdxf" />
+            <item index="16" class="java.lang.String" itemvalue="matplotlib" />
+            <item index="17" class="java.lang.String" itemvalue="numpy" />
+            <item index="18" class="java.lang.String" itemvalue="sympy" />
+            <item index="19" class="java.lang.String" itemvalue="Flask" />
+            <item index="20" class="java.lang.String" itemvalue="wheel" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

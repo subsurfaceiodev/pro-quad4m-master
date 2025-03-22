@@ -32,54 +32,56 @@ It shall be noted that the file `QUAD4M.EXE` is essential in order to execute QU
 
 [5] <https://nisee.berkeley.edu/elibrary/> (last accessed on 2020 January 31st)
 
+## Project Upgrade and Migration
+
+This project, originally named "pro-QUAD4M," was cloned from its source at [https://gitlab.rm.ingv.it/rodolfo.puglia/pro-quad4m](https://gitlab.rm.ingv.it/rodolfo.puglia/pro-quad4m), where it was developed to support Python 2.7. We have upgraded the codebase to be fully compatible with **Python 3.13**, ensuring it leverages modern Python features and maintains compatibility with current systems. 
+
+The updated version is now hosted on GitHub. Contributions, issues, and feedback are welcome!
+
+### Key Changes
+- Migrated from Python 2.7 to Python 3.13.
+- Updated syntax and libraries to align with Python 3.x standards.
+
+For installation and usage instructions, refer to the sections below (updated as needed for Python 3.13 compatibility).
 
 Installation
 ------------
 
-Scripts within **`pro-QUAD4M`** are written in `Python 2.7` and need the following external Python-modules to be installed: `jsonschema`, `matplotlib`, `numpy`, `scipy` and `shapely`.
+Scripts within **`pro-QUAD4M`** are written in `Python 3.13` and need the following external Python-modules to be installed: `jsonschema`, `matplotlib`, `numpy`, `scipy` and `shapely`.
 
 
 ### `Windows` ###
 
 The installation procedure illustrated in the following has been successfully performed on both windows 7 (64bit) and windows 10 (64bit) platforms, so it should work even for other windows platform, such as Windows 8, if running at 64-bit.
 
-##### step #1 - installing `Python 2.7` #####
+##### step #1 - installing `Python 3.13` #####
 
-Follow URL [A] (see section "URLs and notes" below), find the latest Windows x86-64 Python 2.7 MSI installer and execute it: on 2020 January 31st, the version to be installed was `python-2.7.17.amd64.msi` (a direct link to this file can be found in note [B]). Installing the file as administrator, with the default choices, Python program base-folder should be `C:\Python27\`. Otherwise, any command in the following steps containing this path have to be replaced with the actual Python program base-folder.
+Follow URL [A] (see section "URLs and notes" below), find the latest Windows x86-64 Python 3.13 MSI installer and execute it: on 2020 January 31st, the version to be installed was `python-3.13.1-amd64.exe` (a direct link to this file can be found in note [B]). Installing the file as administrator, with the default choices, Python program base-folder should be `C:\Users\USER\AppData\Local\Programs\Python\Python313`. Otherwise, any command in the following steps containing this path have to be replaced with the actual Python program base-folder.
 
-##### step #2 - check if `Python 2.7` is correctly installed #####
+##### step #2 - check if `Python 3.13` is correctly installed #####
 
-Open a command-prompt and type `> C:\Python27\python.exe -V`, the system should answer `Python 2.7.*`.
+Open a command-prompt and type `> python.exe -V`, the system should answer `Python 3.13.*`.
 
 ##### step #3 - installing Python-modules #####
 
 Type on command-prompt:
 
-    > C:\Python27\python.exe -m pip install numpy
-    > C:\Python27\python.exe -m pip install scipy
-    > C:\Python27\python.exe -m pip install matplotlib
-    > C:\Python27\python.exe -m pip install jsonschema
-    > C:\Python27\python.exe -m pip install shapely
-
-The latter command (`... shapely`) may result in an error (see [C] and [D]). If this is the case, one possibility is to download the shapely wheels (`.whl`) for the corresponding version of Python - i.e. the file `Shapely-1.6.4.post2-cp27-cp27m-win_amd64.whl` from [E] - and execute it from command-prompt, such as:
-
-    > C:\Python27\python.exe -m pip install Downloads\Shapely-1.6.4.post2-cp27-cp27m-win_amd64.whl
-
-of course, if necessary, replace `Downloads\` with the correct path.
-
-Notice that, if - for some obscure reason (!) - one of the commands listed in step #3 ends in an error such as "denied access", this problem has been solved executing twice the MSI installer at step #1: the first time uninstalling Python and the second re-installing it again. Then, re-check Python (step #2) and continue the Python-modules installation at step #3.
-
+    > pip install numpy
+    > pip install scipy
+    > pip install matplotlib
+    > pip install jsonschema
+    > pip install shapely
 
 ### `Linux` ###
 
-The installation procedure has been tested on several Debian-based Linux platforms [F]. On Linux environments, differently from Windows, the use of `pip` is not preferrable, being many Linux distributions have these Python-modules already available as packages in their default repositories. In pratice, since `Python 2.7` should be already present in most of Linux distributions (check it typing `$ python -V` in Linux terminal: the answer should be `Python 2.7.*`), use first `$ aptitude search ...` and, then, `# apt-get install ...` (or `$ sudo apt-get install ...`) to install missing Python-modules. On a typical Debian-based Linux distribution, pakages to be installed via `apt-get` are: `python-numpy`, `python-scipy`, `python-matplotlib`, `python-jsonschema` and `python-shapely`. Furthermore, `Wine` [G] should be installed in order to run the Windows application `QUAD4M.EXE`: the installation can be performed through `# apt-get install wine` or following specific how-to for the Linux distrubution in hand. This procedure should be enough to have in place a working environment for **`pro-QUAD4M`** and `QUAD4M.EXE` on Linux.
+The installation procedure has been tested on several Debian-based Linux platforms [F]. On Linux environments, differently from Windows, the use of `pip` is not preferrable, being many Linux distributions have these Python-modules already available as packages in their default repositories. In pratice, since `Python 3.13` should be already present in most of Linux distributions (check it typing `$ python -V` in Linux terminal: the answer should be `Python 3.13.*`), use first `$ aptitude search ...` and, then, `# apt-get install ...` (or `$ sudo apt-get install ...`) to install missing Python-modules. On a typical Debian-based Linux distribution, pakages to be installed via `apt-get` are: `python-numpy`, `python-scipy`, `python-matplotlib`, `python-jsonschema` and `python-shapely`. Furthermore, `Wine` [G] should be installed in order to run the Windows application `QUAD4M.EXE`: the installation can be performed through `# apt-get install wine` or following specific how-to for the Linux distrubution in hand. This procedure should be enough to have in place a working environment for **`pro-QUAD4M`** and `QUAD4M.EXE` on Linux.
 
 
 ##### URLs and notes #####
 
 [A] <https://www.python.org/downloads/>
 
-[B] <https://www.python.org/ftp/python/2.7.17/python-2.7.17.amd64.msi>
+[B] <https://www.python.org/ftp/python/3.13.1/python-3.13.1-amd64.exe>
 
 [C] <https://gis.stackexchange.com/questions/329987/error-installing-shapely-package-using-pip-command>
 
@@ -107,11 +109,11 @@ This section would help users in order to acquire confidence executing `pre_QUAD
 
 Open a command-prompt and change directory to the **`pro-QUAD4M`** folder. Once here (typing `> dir`, the two main scripts `pre_QUAD4M.py` and `post_QUAD4M.py` should be listed), typing the command:
 
-    > C:\Python27\python.exe pre_QUAD4M.py --help
+    > python.exe pre_QUAD4M.py --help
 
 the corresponding help is displayed, while typing:
 
-    > C:\Python27\python.exe pre_QUAD4M.py model.json time-history.xacc time-history.yacc
+    > python.exe pre_QUAD4M.py model.json time-history.xacc time-history.yacc
 
 the execution of the pre-processor starts using sample-inputs provided within **`pro-QUAD4M`**. At the end of execution, the mesh is generated, along with graphical outputs and QUAD4M inputs, within the folder `var`. Graphical outputs, in SVG format, can easly been displayed using a browser (e.g., firefox).
 
@@ -157,11 +159,11 @@ and the following lines are displayed (enter input, soil-data and output filenam
 
 Navigate back to **`pro-QUAD4M`** folder (e.g., typing `> cd ..` twice) and type:
 
-    > C:\Python27\python.exe post_QUAD4M.py --help
+    > python.exe post_QUAD4M.py --help
 
 to display the help, and:
 
-    > C:\Python27\python.exe post_QUAD4M.py model.json var\test_1\MDL.Q4O var\test_1\SG.Q4A var\test_1\borders.txt
+    > python.exe post_QUAD4M.py model.json var\test_1\MDL.Q4O var\test_1\SG.Q4A var\test_1\borders.txt
 
 to execute the post-processing. Results are then created in folder `var\test_1`. 
 
@@ -172,7 +174,7 @@ Open JSON-file `model.json` using an editor (such as "geany" or "notepad++"), an
 
 ### `Linux` ###
 
-Commands to be executed on Linux terminal are very similar to those presented at steps #4, #5, #6 and #7 in the previous Windows section. For each command, just replace any `C:\Python27\python.exe` with `python`, any `\` with `/` (except the one during `QUAD4M.EXE` execution), `dir` with `ls` and `QUAD4M.EXE` with `wine QUAD4M.EXE` (...and, of course, any `>` with `<span>$</span>`).
+Commands to be executed on Linux terminal are very similar to those presented at steps #4, #5, #6 and #7 in the previous Windows section. For each command, just replace any `python.exe` with `python`, any `\` with `/` (except the one during `QUAD4M.EXE` execution), `dir` with `ls` and `QUAD4M.EXE` with `wine QUAD4M.EXE` (...and, of course, any `>` with `<span>$</span>`).
 
 
 JSON-file
@@ -672,8 +674,6 @@ Using sample input-files `model.json`, `time-history.xacc` and `time-history.yac
 [//]: # "                                                                                               " 
 [//]: # "Future development                                                                             " 
 [//]: # "------------------                                                                             " 
-[//]: # "                                                                                               " 
-[//]: # "+ porting of `pro-QUAD4M` from `Python 2.7` to `Python 3`                                      " 
 [//]: # "                                                                                               " 
 [//]: # "+ 'h_{MAX}' dependent to the strain-ratio? i.e.: ...dependent to 'V_S' attributed to stratum?  " 
 [//]: # "  ...or, better, use `G_kN_m_3` percentage to reduce 'V_S' of the stratum                      " 

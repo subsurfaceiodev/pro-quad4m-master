@@ -1,0 +1,20 @@
+C:\Python27\python.exe post_QUAD4M.py model.json var\test_1\MDL.Q4O var\test_1\SG.Q4A var\test_1\borders.txt 
+ 
+============ identifying output nodes =============
+====== Fourier spectra have been calculated =======
+====== response spectra have been calculated ======
+=================== STRESS plot ===================
+=================== STRAIN plot ===================
+==================== XACC plot ====================
+==================== YACC plot ====================
+==================== PGA plot =====================
+==================== PGV plot =====================
+==================== PGD plot =====================
+===================== HI plot =====================
+===================== AI plot =====================
+==================== DUR plot =====================
+===================== SA plot =====================
+==================== FFT plot =====================
+==================== ACC plot =====================
+
+Process finished with exit code 0
